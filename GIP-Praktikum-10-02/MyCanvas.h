@@ -49,6 +49,7 @@ public:
     char get(unsigned int x, unsigned int y) const;
     std::string to_string() const;
     void print() const;
+    void draw_rectangle(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2);
 
 private:
     unsigned int size_x{0}, size_y{0};
