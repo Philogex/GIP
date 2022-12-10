@@ -37,9 +37,9 @@ public:
         return *this;
     }
 
-    unsigned int get_size_x() { return size_x; }
-    unsigned int get_size_y() { return size_y; }
-    char *get_canvas_array_ptr() { return canvas_array_ptr; }
+    unsigned int get_size_x() const { return size_x; }
+    unsigned int get_size_y() const { return size_y; }
+    char *get_canvas_array_ptr() const { return canvas_array_ptr; }
 
     void set_size_x(unsigned int new_size_x) { size_x = new_size_x; }
     void set_size_y(unsigned int new_size_y) { size_y = new_size_y; }

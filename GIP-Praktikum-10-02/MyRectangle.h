@@ -10,11 +10,11 @@ class MyRectangle
 public:
     MyRectangle(MyCanvas &canvas, unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2) : x1{x1}, y1{y1}, x2{x2}, y2{y2}, canvas_ptr{&canvas} {}
 
-    unsigned int get_x1() { return x1; }
-    unsigned int get_y1() { return y1; }
-    unsigned int get_x2() { return x2; }
-    unsigned int get_y2() { return y2; }
-    MyCanvas *get_canvas_ptr() { return canvas_ptr; }
+    unsigned int get_x1() const { return x1; }
+    unsigned int get_y1() const { return y1; }
+    unsigned int get_x2() const { return x2; }
+    unsigned int get_y2() const { return y2; }
+    MyCanvas *get_canvas_ptr() const { return canvas_ptr; }
 
     void set_x1(unsigned int x1) { this->x1 = x1; }
     void set_y1(unsigned int y1) { this->y1 = y1; }
