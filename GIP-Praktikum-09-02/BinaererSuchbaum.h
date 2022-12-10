@@ -7,7 +7,7 @@ class BinaererSuchbaum
 public:
     BinaererSuchbaum(BaumKnoten *r = nullptr) : root{r} {}
 
-    BaumKnoten *get_root() { return root; } // const fehlt und ??????????????????? bitte mal sinn erklären
+    BaumKnoten *get_root() { return root; }
 
     void einfuegen(int wert);
     void ausgeben();
