@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+#include "gip_mini_catch_heap_alloc.h"
+
 class MyCanvas
 {
 public:
@@ -14,7 +16,7 @@ public:
 
     ~MyCanvas()
     {
-        delete[] canvas_array_ptr;
+        delete canvas_array_ptr;
     }
 
     MyCanvas(const MyCanvas &orig_canvas) : size_x{orig_canvas.size_x}, size_y{orig_canvas.size_y}, canvas_array_ptr{new char[size_x * size_y]}
@@ -27,7 +29,7 @@ public:
 
     MyCanvas &operator=(const MyCanvas &orig_canvas)
     {
-        delete[] canvas_array_ptr;
+        delete canvas_array_ptr;
         size_x = orig_canvas.size_x;
         size_y = orig_canvas.size_y;
         canvas_array_ptr = new char[size_x * size_y];
@@ -53,8 +55,8 @@ public:
     void draw_rectangle(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2);
 
 protected:
-    unsigned int size_x{0}, size_y{0};
-    char *canvas_array_ptr{nullptr};
+    unsigned int size_x, size_y;
+    char *canvas_array_ptr;
 
     void init(char *&canvas, unsigned int x, unsigned int y)
     {

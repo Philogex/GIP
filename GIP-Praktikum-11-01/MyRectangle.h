@@ -7,6 +7,13 @@ class MyRectangle : public MyCanvas
 public:
     MyRectangle(MyCanvas &canvas, unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2) : x1{x1}, y1{y1}, x2{x2}, y2{y2}, canvas_ptr{&canvas} {}
 
+    MyRectangle operator*(unsigned int i)
+    {
+        // MyCanvas *new_canvas = new MyCanvas{size_x, size_y}; ?
+        MyRectangle *modified_rect = new MyRectangle{*canvas_ptr, x1, y1, ((x2 - x1) * i) + x1, ((y2 - y1) * i) + y1};
+        return *modified_rect;
+    }
+
     unsigned int get_x1() const { return x1; }
     unsigned int get_y1() const { return y1; }
     unsigned int get_x2() const { return x2; }

@@ -50,9 +50,9 @@ public:
     std::string to_string() const;
     void print() const;
 
-private:
+protected:
     unsigned int size_x{0}, size_y{0};
-    char *canvas_array_ptr;
+    char *canvas_array_ptr{nullptr};
 
     void init(char *&canvas, unsigned int x, unsigned int y)
     {
